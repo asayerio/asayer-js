@@ -1,0 +1,30 @@
+{
+  "name": "@asayerio/js",
+  "description": "The Asayer tracker",
+  "version": "0.0.3",
+  "keywords": [
+    "asayer"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "mkdir -p vendor && curl https://static.asayer.io/bundle.js -o vendor/bundle.js",
+    "prettier": "prettier --write lib/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asayerio/js.git"
+  },
+  "author": "Alex Tsokurov <alex@asayer.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asayerio/js/issues"
+  },
+  "homepage": "https://github.com/asayerio/js#readme",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
