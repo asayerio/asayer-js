@@ -8,7 +8,7 @@ npm i @asayerio/js --save
 ```
 
 ## Usage
-Initialize the package from your codebase entry point.
+Initialize the package from your codebase entry point. This would start the Asayer tracking snippet. SITE_ID can be found in your Asayer dashboard after clicking on **Tracking Code** under [Preferences -> Sites](https://app.asayer.io/client/sites).
 
 ```js
 import { init } from '@asayerio/js';
