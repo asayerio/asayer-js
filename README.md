@@ -25,3 +25,30 @@ import asayer from '@asayerio/js';
 
 asayer.vars('userId', 'my_custom_user_id');
 ```
+
+Also, there is the set of additional methods available when using the package
+
+### fetch
+
+In order to write down the payload of the requests and responses, and simplify the integration with backend logs, you can use our wrapper over the `fetch`
+
+```js
+import { init, fetch } from '@asayerio/js';
+
+init({ siteID: XXX, fetch: { sessionIDHeader: 'X-SessionID' } }); // header name for sessionID (optional)
+
+fetch('http://example.com/movies.json')
+  .then(...)
+```
+
+### profiler
+
+To measure the performance of specific part of your code you can use `profiler` call
+
+```js
+import { profiler } from '@asayerio/js';
+
+var fn = profiler('call_name')(function () {
+  ...
+}, thisArg); // thisArg is optional
+```
